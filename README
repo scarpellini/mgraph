@@ -40,7 +40,7 @@ Checking node existence:
 >>> g.has_node(g.objectid("4dd49c782041095cbc000002"))
 True
 >>>
-s_node(g.objectid("4dd49c782041095cbc00000d"))
+>>> g.has_node(g.objectid("4dd49c782041095cbc00000d"))
 False
 
 
