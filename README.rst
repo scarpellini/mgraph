@@ -1,6 +1,6 @@
 ======
 MGraph
-=====
+======
 
 A simple implementation of directed graph (http://en.wikipedia.org/wiki/Directed_graph) using MongoDB.
 
