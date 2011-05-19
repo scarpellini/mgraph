@@ -25,14 +25,14 @@ ObjectId('4dd49c832041095cbc000003')
 >>>
 >>>
 >>>
-xxx = g.add_node(
-    { "name": "xxx",
-      "type": "P",
-      "country": "BR",
-      "cities": ["Sao Paulo", "Rio de Janeiro"],
-      "phone": {
-            "mobile":  "+551112345678"}
-    })
+>>> xxx = g.add_node(
+...    { "name": "xxx",
+...      "type": "P",
+...      "country": "BR",
+...      "cities": ["Sao Paulo", "Rio de Janeiro"],
+...      "phone": {
+...            "mobile":  "+551112345678"}
+...    })
 >>>
 
 
