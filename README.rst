@@ -41,6 +41,7 @@ ObjectId('4dd49c832041095cbc000003')
 >>>
 
 
+
 Checking node existence:
 ========================
 
@@ -49,6 +50,7 @@ True
 >>>
 >>> g.has_node(g.objectid("4dd49c782041095cbc00000d"))
 False
+
 
 
 Getting [one] node:
@@ -60,6 +62,7 @@ Getting [one] node:
 {u'_id': ObjectId('4dd49c832041095cbc000003'), u'name': u's'}
 
 
+
 Finding nodes:
 ==============
 
@@ -67,6 +70,7 @@ Finding nodes:
 [{u'_id': ObjectId('4dd49c832041095cbc000003'), u'name': u's'}]
 >>> [n for n in g.find_nodes(where={"name": "f"}, attrs=["_id", "name"])]
 [{u'_id': ObjectId('4dd49c6f2041095cbc000000'), u'name': u'f'}]
+
 
 
 Adding edges:
@@ -78,6 +82,7 @@ True
 True
 >>> g.add_edge(d, s)
 True
+
 
 
 Getting edges:
