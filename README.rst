@@ -1,3 +1,7 @@
+======
+MGraph
+=====
+
 A simple implementation of directed graph (http://en.wikipedia.org/wiki/Directed_graph) using MongoDB.
 
 Both nodes and edges are MongoDB documents (each one in its own collections) and support any JSON attributes.
