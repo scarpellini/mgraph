@@ -3,18 +3,19 @@ MGraph
 ======
 
 A simple implementation of directed graph (http://en.wikipedia.org/wiki/Directed_graph) using MongoDB.
-
 Both nodes and edges are MongoDB documents (each one in its own collections) and support any JSON attributes.
 
 
 
-
 Examples:
+--------
 
 
-*Adding Nodes:*
+Adding Nodes:
+=============
 
-@>>> import mgraph
+::
+>>> import mgraph
 >>> 
 >>> g = mgraph.MGraph()
 >>> 
@@ -38,7 +39,7 @@ ObjectId('4dd49c832041095cbc000003')
 ...      "phone": {
 ...            "mobile":  "+551112345678"}
 ...    })
->>>@
+>>>
 
 
 Checking node existence:
