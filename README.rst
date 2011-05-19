@@ -14,7 +14,6 @@ Examples:
 Adding Nodes:
 =============
 
-::
 >>> import mgraph
 >>> 
 >>> g = mgraph.MGraph()
@@ -43,6 +42,8 @@ ObjectId('4dd49c832041095cbc000003')
 
 
 Checking node existence:
+========================
+
 >>> g.has_node(g.objectid("4dd49c782041095cbc000002"))
 True
 >>>
@@ -50,7 +51,9 @@ True
 False
 
 
-Getting one node:
+Getting [one] node:
+=================
+
 >>> g.get_node(f)
 {u'_id': ObjectId('4dd49c6f2041095cbc000000'), u'name': u'f'}
 >>> g.get_node(s)
@@ -58,6 +61,8 @@ Getting one node:
 
 
 Finding nodes:
+==============
+
 >>> [n for n in g.find_nodes(where={"name": "s"}, attrs=["_id", "name"])]
 [{u'_id': ObjectId('4dd49c832041095cbc000003'), u'name': u's'}]
 >>> [n for n in g.find_nodes(where={"name": "f"}, attrs=["_id", "name"])]
@@ -65,6 +70,8 @@ Finding nodes:
 
 
 Adding edges:
+=============
+
 >>> g.add_edge(f, d)
 True
 >>> g.add_edge(f, e)
@@ -74,6 +81,8 @@ True
 
 
 Getting edges:
+==============
+
 >>> g.get_node_edges(f)
 {'_id': ObjectId('4dd49c6f2041095cbc000000'), 'out': {u'4dd49c782041095cbc000002': {u'_to_id': ObjectId('4dd49c782041095cbc000002')}, u'4dd49c732041095cbc000001': {u'_to_id': ObjectId('4dd49c732041095cbc000001')}}, 'in': {}}
 >>>
@@ -88,6 +97,8 @@ Getting edges:
 
 
 Traverser:
+==========
+
 - Breadth-first search (iterator)
 >>> [n for n in t.bfs(f)]
 [({u'_id': ObjectId('4dd49c6f2041095cbc000000'), u'name': u'f'}, {u'_id': ObjectId('4dd49c782041095cbc000002'), u'name': u'e'}), ({u'_id': ObjectId('4dd49c6f2041095cbc000000'), u'name': u'f'}, {u'_id': ObjectId('4dd49c732041095cbc000001'), u'name': u'd'}), ({u'_id': ObjectId('4dd49c732041095cbc000001'), u'name': u'd'}, {u'_id': ObjectId('4dd49c832041095cbc000003'), u'name': u's'})]
