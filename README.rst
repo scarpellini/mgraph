@@ -58,8 +58,13 @@ Getting [one] node:
 
 >>> g.get_node(f)
 {u'_id': ObjectId('4dd49c6f2041095cbc000000'), u'name': u'f'}
+>>>
 >>> g.get_node(s)
 {u'_id': ObjectId('4dd49c832041095cbc000003'), u'name': u's'}
+>>>
+>>> g.get_node(xxx)
+{u'cities': [u'Sao Paulo', u'Rio de Janeiro'], u'name': u'xxx', u'country': u'BR', u'phone': {u'mobile': u'+551112345678'}, u'_id': ObjectId('4dd4a1982041095cbc000008'), u'type': u'P'}
+>>> 
 
 
 
@@ -94,10 +99,6 @@ Getting edges:
 >>> g.get_node_edges(d, direction="out")
 {'_id': ObjectId('4dd49c732041095cbc000001'), 'out': {u'4dd49c832041095cbc000003': {u'_to_id': ObjectId('4dd49c832041095cbc000003')}}}
 >>>
->>> g.get_node(xxx)
-{u'cities': [u'Sao Paulo', u'Rio de Janeiro'], u'name': u'xxx', u'country': u'BR', u'phone': {u'mobile': u'+551112345678'}, u'_id': ObjectId('4dd4a1982041095cbc000008'), u'type': u'P'}
->>> 
-
 
 
 
@@ -105,6 +106,9 @@ Traverser:
 ==========
 
 - Breadth-first search (iterator)
+>>>
+>>> t = mgraph.Traverser(g)
+>>>
 >>> [n for n in t.bfs(f)]
 [({u'_id': ObjectId('4dd49c6f2041095cbc000000'), u'name': u'f'}, {u'_id': ObjectId('4dd49c782041095cbc000002'), u'name': u'e'}), ({u'_id': ObjectId('4dd49c6f2041095cbc000000'), u'name': u'f'}, {u'_id': ObjectId('4dd49c732041095cbc000001'), u'name': u'd'}), ({u'_id': ObjectId('4dd49c732041095cbc000001'), u'name': u'd'}, {u'_id': ObjectId('4dd49c832041095cbc000003'), u'name': u's'})]
 
